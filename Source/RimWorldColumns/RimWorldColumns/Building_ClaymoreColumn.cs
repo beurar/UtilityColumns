@@ -75,19 +75,28 @@ public class Building_ClaymoreColumn : BuildingWithOverlay, IFXObject
         }
     }
 
-    //TODO: Add Warning message
     public override string GetInspectString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.AppendLine(base.GetInspectString());
-        string obstructedDirs = "";
+
+        var baseString = base.GetInspectString().TrimEndNewlines();
+        if (!baseString.NullOrEmpty())
+            sb.AppendLine(baseString);
+
+        List<string> blocked = new List<string>();
         foreach (var charge in Charges)
         {
             if (charge.Obstructed(out _))
-                obstructedDirs += (obstructedDirs.NullOrEmpty() ? "" : ", ") + charge.direction.ToStringHuman();
+            {
+                blocked.Add(charge.direction.ToStringHuman());
+            }
         }
-        if(!obstructedDirs.NullOrEmpty())
-            sb.AppendLine(ColoredText.Colorize("RWC_Obstructed".Translate(obstructedDirs), Color.red));
+
+        if (blocked.Count > 0)
+        {
+            sb.AppendLine(ColoredText.Colorize("RWC_Obstructed".Translate(string.Join(", ", blocked)), Color.red));
+        }
+
         return sb.ToString().TrimEndNewlines();
     }
 
