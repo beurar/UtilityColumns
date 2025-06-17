@@ -56,3 +56,5 @@ crashlytics-build.properties
  
 # Logs
 *.log
+# Ignore compiled assembly for RimWorld 1.6
+1.6/Assemblies/
