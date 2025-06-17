@@ -5,9 +5,11 @@ This mod adds new utility-based columns to RimWorld. These have a wide range of 
 1. Download the mod and extract it.
 2. Copy the `UtilityColumns` folder into your RimWorld `Mods` directory.
 3. Enable **Utility Columns** from the in-game mod menu and restart the game.
+4. For RimWorld **1.6**, compile the assembly using the files in the `Source`
+   folder, as the prebuilt DLL isn't included here.
 
 ## Compatibility
-- **Supported RimWorld versions:** 1.2, 1.3, 1.4 and 1.5.
+- **Supported RimWorld versions:** 1.2, 1.3, 1.4, 1.5 and 1.6.
 - Requires the Harmony library (bundled with the mod).
 - Some column types use features from the **Royalty** or **Anomaly** expansions but the base mod will run without them. When an expansion is missing those columns are simply disabled.
 
