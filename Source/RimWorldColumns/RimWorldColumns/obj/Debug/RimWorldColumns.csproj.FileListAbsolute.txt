@@ -15,6 +15,5 @@ F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Sourc
 F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.sourcelink.json
 F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\1.6\Assemblies\RimWorldColumns.dll
 F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\1.6\Assemblies\RimWorldColumns.pdb
-F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorld.47D92242.Up2Date
 F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.dll
 F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.pdb
