@@ -9,12 +9,12 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Sourc
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Assemblies\RimWorldColumns.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Assemblies\RimWorldColumns.pdb
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.csproj.AssemblyReference.cache
-F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\1.6\Assemblies\RimWorldColumns.dll
-F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\1.6\Assemblies\RimWorldColumns.pdb
 F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.csproj.AssemblyReference.cache
 F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.GeneratedMSBuildEditorConfig.editorconfig
 F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.csproj.CoreCompileInputs.cache
 F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.sourcelink.json
+F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\1.6\Assemblies\RimWorldColumns.dll
+F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\1.6\Assemblies\RimWorldColumns.pdb
 F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorld.47D92242.Up2Date
 F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.dll
 F:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\UtilityColumns\Source\RimWorldColumns\RimWorldColumns\obj\Debug\RimWorldColumns.pdb

@@ -12,6 +12,7 @@ namespace RimWorldColumns
             Room room = center.GetRoom(currentMap);
             if (room != null && !room.UsesOutdoorTemperature)
             {
+
                 GenDraw.DrawFieldEdges(room.Cells.ToList(), GenTemperature.ColorRoomCold);
             }
         }

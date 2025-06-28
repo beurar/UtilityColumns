@@ -517,7 +517,7 @@
 		<defName>DetColumnMod</defName>
 		<label>cluster column</label>
 		<description>A column for base defense. Upon detecting an enemy in any direction, it will detonate a highly explosive cluster charge into the same direction. Can be reloaded.</description>
-                <thingClass>RimWorldColumns.Building_TurretGunColumn</thingClass>
+		<thingClass>Building_TurretGun</thingClass>
 		<graphicData>
 			<drawSize>(1.25,1.25)</drawSize>
 			<drawOffset>(0,0,0.2)</drawOffset>
@@ -681,7 +681,7 @@
 		<defName>FlameColumnMod</defName>
 		<label>flame column</label>
 		<description>A column for base defense. Upon detecting an enemy in any direction, it will detonate an incendiary bomb charge into the same direction. Can be reloaded.</description>
-		<thingClass>RimWorldColumns.Building_TurretGunColumn</thingClass>
+		<thingClass>Building_TurretGun</thingClass>
 		<graphicData>
 			<drawSize>(1.25,1.25)</drawSize>
 			<drawOffset>(0,0,0.2)</drawOffset>
@@ -850,7 +850,7 @@
 		<defName>EMPColumnMod</defName>
 		<label>stun pulse column</label>
 		<description>An advanced column for base defense. Upon detecting an enemy in any direction, it will emits a strong stun pulse into the same direction. Enemies within range are stunned for 15 seconds. Can be reloaded.</description>
-		<thingClass>RimWorldColumns.Building_TurretGunColumn</thingClass>
+		<thingClass>Building_TurretGun</thingClass>
 		<graphicData>
 			<drawSize>(1.25,1.25)</drawSize>
 			<drawOffset>(0,0,0.2)</drawOffset>
@@ -1016,7 +1016,7 @@
 		<defName>DeadColumnMod</defName>
 		<label>Deadlife column</label>
 		<description>An advanced column for base defense. Upon detecting an enemy in any direction, it will raise nearby human and animal corpses as shamblers. The shamblers will only attack your enemies.</description>
-		<thingClass>RimWorldColumns.Building_TurretGunColumn</thingClass>
+		<thingClass>Building_TurretGun</thingClass>
 		<graphicData>
 			<drawSize>(1.25,1.25)</drawSize>
 			<drawOffset>(0,0,0.2)</drawOffset>
