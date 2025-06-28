@@ -6,7 +6,8 @@ This mod adds new utility-based columns to RimWorld. These have a wide range of 
 2. Copy the `UtilityColumns` folder into your RimWorld `Mods` directory.
 3. Enable **Utility Columns** from the in-game mod menu and restart the game.
 4. For RimWorld **1.6**, compile the assembly using the files in the `Source`
-   folder, as the prebuilt DLL isn't included here.
+   folder and output it to the `1.6/Assemblies` directory, as the prebuilt
+   DLL isn't included here.
 
 ## Compatibility
 - **Supported RimWorld versions:** 1.2, 1.3, 1.4, 1.5 and 1.6.
