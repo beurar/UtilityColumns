@@ -1,15 +1,15 @@
 using RimWorld;
 using Verse;
-using CombatExtended;
+using Verse.AI;
 
 namespace RimWorldColumns
 {
     public class Building_TurretGunColumn : Building_TurretGun
     {
-        public override bool ThreatDisabled(Thing other = null)
+        public new bool ThreatDisabled(IAttackTargetSearcher other)
         {
-            var compAmmo = this.TryGetComp<CompAmmoUser>();
-            if (compAmmo != null && !compAmmo.HasAmmo)
+            var compAmmo = this.TryGetComp<CompRefuelable>();
+            if (compAmmo != null && !compAmmo.HasFuel)
                 return true;
 
             return base.ThreatDisabled(other);

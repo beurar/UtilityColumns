@@ -60,3 +60,5 @@ crashlytics-build.properties
 1.6/Assemblies/
 /Source/RimWorldColumns/.vs
 /Source/RimWorldColumns/RimWorldColumns/obj
+/Source/RimWorldColumns/RimWorldColumns/obj
+/Source/RimWorldColumns/RimWorldColumns/obj/Debug
