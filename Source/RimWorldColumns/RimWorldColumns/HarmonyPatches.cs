@@ -99,4 +99,18 @@ namespace RimWorldColumns
             __result += HarmonyPatches.extraColumns.Sum(r.ThingCount);
         }
     }
+
+    [HarmonyPatch(typeof(Building_TurretGun), nameof(Building_TurretGun.ThreatDisabled))]
+    static class Patch_Building_TurretGun_ThreatDisabled
+    {
+        static void Postfix(Building_TurretGun __instance, ref bool __result, IAttackTargetSearcher other)
+        {
+            if (__instance is Building_TurretGunColumn column)
+            {
+                var compAmmo = column.TryGetComp<CompRefuelable>();
+                if (compAmmo != null && !compAmmo.HasFuel)
+                    __result = true;
+            }
+        }
+    }
 }
