@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Verse;
+using Verse.AI;
 
 namespace RimWorldColumns
 {
@@ -100,10 +101,10 @@ namespace RimWorldColumns
         }
     }
 
-    [HarmonyPatch(typeof(Building_TurretGun), nameof(Building_TurretGun.ThreatDisabled))]
-    static class Patch_Building_TurretGun_ThreatDisabled
+    [HarmonyPatch(typeof(Building_Turret), "ThreatDisabled")]
+    static class Patch_Building_Turret_ThreatDisabled
     {
-        static void Postfix(Building_TurretGun __instance, ref bool __result, IAttackTargetSearcher other)
+        static void Postfix(Building_Turret __instance, ref bool __result, IAttackTargetSearcher disabledFor)
         {
             if (__instance is Building_TurretGunColumn column)
             {
@@ -113,4 +114,5 @@ namespace RimWorldColumns
             }
         }
     }
+
 }
