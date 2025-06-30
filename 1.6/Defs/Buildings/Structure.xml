@@ -1446,11 +1446,6 @@
 				<colorPickerEnabled>true</colorPickerEnabled>
 				<darklightToggle>true</darklightToggle>				
 			</li>
-		      <li Class="CompProperties_Art">
-				<nameMaker>NamerArtSculpture</nameMaker>
-				<descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
-		        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
-		      </li>
 			  <li Class="CompProperties_SpawnSubplant" MayRequire="Ludeon.RimWorld.Royalty">
 				<compClass>CompSpawnImmortalSubplantsAround</compClass>
 				<subplant>Plant_TreeAnima</subplant>
@@ -1483,6 +1478,13 @@
 				</chanceOverDistance>
 				<saveKeysPrefix>grass</saveKeysPrefix>
 			  </li>
+				<!--
+				<li Class="CompProperties_CauseHediff_AoE">
+					<range>9.9</range>
+					<onlyTargetMechs>false</onlyTargetMechs>
+					<hediff>BrainBoostMod</hediff>
+					<activeSound>MechBooster_Working</activeSound>
+				</li> -->
 		</comps>
 		<tickerType>Normal</tickerType>
 		<pathCost>75</pathCost>
@@ -1499,7 +1501,35 @@
 		<fertility>0</fertility>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 	</ThingDef>
-	
+<!--	
+  <HediffDef>
+    <defName>BrainBoostMod</defName>
+    <label>archo boost</label>
+    <description>The archo device awakens all sentient beings nearby.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>30</disappearsAfterTicks>
+        <showRemainingTime>false</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath"/>
+      <li Class="HediffCompProperties_Link">
+        <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+			<ShootingAccuracyPawn>1.25</ShootingAccuracyPawn>
+			<WorkSpeedGlobal>1.25</WorkSpeedGlobal>
+			<MoveSpeed>1.25</MoveSpeed>
+        </statFactors>
+      </li>
+    </stages>
+    <isBad>false</isBad>
+  </HediffDef>
+-->	
   <ThingDef ParentName="BaseGrenadeProjectile">
     <defName>Grenade_ArchoDrone</defName>
     <label>archo cube</label> 
@@ -1531,23 +1561,23 @@
 			<wornGraphicPath>Buildings/ArchoColumn/ArchoDroneIcon</wornGraphicPath>
 			<wornGraphicData>
 			<renderUtilityAsPack>true</renderUtilityAsPack>
-			<north>
-				<male>  <offset>(0.25, -0.25)</offset> </male>
-				<female><offset>(0.25,-0.25)</offset> </female>
-				<thin>  <offset>(0.15,-0.25)</offset> </thin>
-				<hulk>  <offset>(0.25,-0.3)</offset> </hulk>
-				<fat>   <offset>(0.45,-0.25)</offset> </fat>
-			</north>
-			<south>
-				<male>  <offset>(-0.3, -0.25)</offset> </male>
-				<female><offset>(-0.3,-0.25)</offset> </female>
-				<thin>  <offset>(-0.2,-0.25)</offset> </thin>
-				<hulk>  <offset>(-0.3,-0.3)</offset> </hulk>
-				<fat>   <offset>(-0.5,-0.25)</offset> </fat>
-			</south>
-			<east>
-				<offset>(-0.05,-0.3)</offset>
-			</east>
+        <north>
+          <male>  <offset>(0.25, -0.25)</offset> </male>
+          <female><offset>(0.25,-0.25)</offset> </female>
+          <thin>  <offset>(0.15,-0.25)</offset> </thin>
+          <hulk>  <offset>(0.25,-0.3)</offset> </hulk>
+          <fat>   <offset>(0.45,-0.25)</offset> </fat>
+        </north>
+        <south>
+          <male>  <offset>(-0.3, -0.25)</offset> </male>
+          <female><offset>(-0.3,-0.25)</offset> </female>
+          <thin>  <offset>(-0.2,-0.25)</offset> </thin>
+          <hulk>  <offset>(-0.3,-0.3)</offset> </hulk>
+          <fat>   <offset>(-0.5,-0.25)</offset> </fat>
+        </south>
+        <east>
+          <offset>(-0.05,-0.3)</offset>
+        </east>
 			<male>  <scale>(0.6,0.6)</scale> </male>
 			<female><scale>(0.6,0.6)</scale> </female>
 			<thin>  <scale>(0.6,0.6)</scale> </thin>
@@ -1562,6 +1592,7 @@
 			<Mass>2.0</Mass>
 			<Flammability>0</Flammability>
 			<Beauty>10</Beauty>
+			<EquipDelay>0.5</EquipDelay>
 		</statBases>
 		<tradeability>Sellable</tradeability>
 		<tradeTags>
@@ -1578,6 +1609,13 @@
 			<maxCharges>1</maxCharges>
 			<destroyOnEmpty>true</destroyOnEmpty>
 		  </li>
+		  <!--
+		  <li Class="CompProperties_CauseHediff_AoE">
+			<range>1</range>
+			<onlyTargetMechs>false</onlyTargetMechs>
+			<hediff>BrainBoostMod</hediff>
+			<activeSound>MechBooster_Working</activeSound>
+		  </li> -->
 		</comps>
 		<verbs>
 		  <li>
