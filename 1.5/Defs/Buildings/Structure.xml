@@ -404,6 +404,118 @@
 	<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
 
+<ThingDef ParentName="BuildingBase">
+    <defName>SunColumnMod24H</defName>
+    <label>sun column (24 hour)</label>
+    <description>A utility column, acts like a big sun lamp and keeps the room temperatue, perfect for greenhouses. Runs all 24 hours of the day.</description>
+    <thingClass>Building_SunLamp</thingClass>
+    <graphicData>
+      <drawSize>(1.25,1.25)</drawSize>
+      <drawOffset>(0,0,0.2)</drawOffset>
+      <texPath>Buildings/SunColumn_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.5, 0.3)</volume>
+        <offset>(0,0,-0.23)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+	<uiIconPath>Buildings/SunColumn</uiIconPath>
+    <tickerType>Rare</tickerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Flammability>0.05</Flammability>
+      <Beauty>50</Beauty>
+      <Mass>15</Mass>
+    </statBases>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <fillPercent>0.25</fillPercent>
+    <costList>
+      <Steel>150</Steel>
+	  <Plasteel>5</Plasteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <comps>
+		<li Class="RimWorldColumns.CompProperties_Overlays">
+			<overlays>
+				<li>
+					<data>
+						<drawSize>(1.25,1.25)</drawSize>
+						<drawOffset>(0,0,0.2)</drawOffset>
+						<texPath>Buildings/SunColumn_Overlay</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+						<shaderType>MoteGlow</shaderType>
+					</data>
+					<needsPower>true</needsPower>
+				</li>
+			</overlays>
+		</li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Glower">
+        <overlightRadius>8.5</overlightRadius>
+        <glowRadius>11.9</glowRadius>
+        <glowColor>(250,250,250,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <basePowerConsumption>3500</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Schedule">
+        <!-- Runs 24 hours a day -->
+        <startTime>0.0</startTime>
+        <endTime>1.0</endTime>
+        <offMessage>Off for plant resting period</offMessage>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>25</heatPerSecond>
+        <heatPushMaxTemperature>30</heatPushMaxTemperature>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusher</compClass>
+        <heatPerSecond>30</heatPerSecond>
+        <heatPushMaxTemperature>2</heatPushMaxTemperature>
+      </li>
+    </comps>
+    <specialDisplayRadius>7.1</specialDisplayRadius>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+	<killedLeavings>
+		<ChunkSlagSteel>1</ChunkSlagSteel>
+		<ComponentIndustrial>2</ComponentIndustrial>
+	</killedLeavings>
+    <pathCost>25</pathCost>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Furniture</designationCategory>
+    <rotatable>false</rotatable>
+    <stealable>false</stealable>
+    <building>
+      <expandHomeArea>false</expandHomeArea>
+	  <ai_combatDangerous>true</ai_combatDangerous>
+    </building>
+    <placeWorkers>
+	  <li>PlaceWorker_GlowRadius</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>OrbitalTradeColumnRes</li>
+	  <li>AirConditioning</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <holdsRoof>true</holdsRoof>
+    <canOverlapZones>true</canOverlapZones>
+    <fertility>0</fertility>
+	<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
   <ThingDef ParentName="BuildingBase">
     <defName>IceColumnMod</defName>
     <label>frozen column</label>
