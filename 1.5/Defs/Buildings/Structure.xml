@@ -294,8 +294,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>SunColumnMod</defName>
     <label>sun column</label>
-    <description>A utility column, acts like a big sun lamp and keeps the room temperatue, perfect for greenhouses. Automatically turns itself off at night.</description>
-	  
+    <description>A utility column, acts like a big sun lamp and keeps the room temperature, perfect for greenhouses. Automatically turns itself off at night.</description>	  
     <thingClass>Building_SunLamp</thingClass>
     <graphicData>
       <drawSize>(1.25,1.25)</drawSize>
@@ -407,7 +406,7 @@
 <ThingDef ParentName="BuildingBase">
     <defName>SunColumnMod24H</defName>
     <label>sun column (24 hour)</label>
-    <description>A utility column, acts like a big sun lamp and keeps the room temperatue, perfect for greenhouses. Runs all 24 hours of the day.</description>
+    <description>A utility column, acts like a big sun lamp and keeps the room temperature, perfect for greenhouses. Runs all 24 hours of the day.</description>
     <thingClass>Building_SunLamp</thingClass>
     <graphicData>
       <drawSize>(1.25,1.25)</drawSize>
