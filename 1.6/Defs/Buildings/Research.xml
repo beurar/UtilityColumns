@@ -4,7 +4,7 @@
   <ResearchProjectDef>
     <defName>OrbitalTradeColumnRes</defName>
     <label>utility columns</label>
-    <description>Unlocks several utility columns.</description>
+    <description>Unlocks various utility columns.</description>
     <baseCost>2000</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
@@ -14,11 +14,10 @@
     <researchViewY>6</researchViewY>
   </ResearchProjectDef>
 
-
   <ResearchProjectDef>
     <defName>DetColumnRes</defName>
     <label>defence columns</label>
-    <description>Unlocks the cluster columns for base defense.</description>
+    <description>Unlocks various defence columns for base defense.</description>
     <baseCost>1000</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
@@ -29,20 +28,17 @@
 	<researchViewY>6</researchViewY>
   </ResearchProjectDef>
 
-
-
-<!--
 	<ResearchProjectDef>
-		<defName>RepairItems</defName>
-		<label>Item Repair</label>
-		<description>Grants the ability to repair the durability of items.</description>
-		<baseCost>700</baseCost>
+		<defName>UtilityPanelsRes</defName>
+		<label>utility wall pads</label>
+		<description>Unlocks various utility wall pads, designed to maximize space utilization in simple architecture and gravships.</description>
+		<baseCost>1500</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
-			<li>Machining</li>
+			<li>MicroelectronicsBasics</li>
 		</prerequisites>
-		<researchViewX>6.00</researchViewX>
-		<researchViewY>4.80</researchViewY>
+		<researchViewX>11.00</researchViewX>
+		<researchViewY>6</researchViewY>
 	</ResearchProjectDef>
 -->
 

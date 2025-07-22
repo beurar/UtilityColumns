@@ -190,7 +190,7 @@
     <researchPrerequisites>
       <li>OrbitalTradeColumnRes</li>
     </researchPrerequisites>
-    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <holdsRoof>true</holdsRoof>
     <canOverlapZones>true</canOverlapZones>
     <fertility>0</fertility>
@@ -284,12 +284,85 @@
       <li>OrbitalTradeColumnRes</li>
 	  <li>MicroelectronicsBasics</li>
 	</researchPrerequisites>
-    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <holdsRoof>true</holdsRoof>
     <canOverlapZones>true</canOverlapZones>
     <fertility>0</fertility>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>Wall_TradeDevice</defName>
+    <label>orbital trade pad</label>
+    <description>A utility wall pad, acts like an orbital trade beacon, and lights the area, perfect for small warehouses.</description>
+    <thingClass>Building_OrbitalTradeBeacon</thingClass>
+	<graphicData>
+	    <texPath>WallDevices/Wall_TradeDevice</texPath>
+	    <graphicClass>Graphic_Multi</graphicClass>
+	    <drawOffsetNorth>(0,0,0.95)</drawOffsetNorth>
+	    <drawOffsetSouth>(0,0,-0.9)</drawOffsetSouth>
+	    <drawOffsetWest>(-0.9,0,0)</drawOffsetWest>
+	    <drawOffsetEast>(0.9,0,0)</drawOffsetEast>
+	    <damageData>
+		  <enabled>false</enabled>
+	    </damageData>
+	</graphicData>
+	<uiIconPath>WallDevices/Wall_TradeDevice</uiIconPath>
+    <tickerType>Rare</tickerType>
+	<altitudeLayer>BuildingOnTop</altitudeLayer>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>0.1</Flammability>
+      <Mass>5</Mass>
+    </statBases>
+    <fillPercent>0.25</fillPercent>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Forbiddable"/>
+		<li Class="CompProperties_Power">
+			<compClass>CompPowerTrader</compClass>
+			<shortCircuitInRain>false</shortCircuitInRain>
+			<basePowerConsumption>45</basePowerConsumption>
+		</li>
+		<li Class="CompProperties_Glower">
+			<glowRadius>5.9</glowRadius>
+			<glowColor>(217,217,208,0)</glowColor>
+			<darklightToggle>true</darklightToggle>
+		</li>
+    </comps>
+    <pathCost>0</pathCost>
+    <passability>Standable</passability>
+    <designationCategory>Misc</designationCategory>
+    <rotatable>true</rotatable>
+    <stealable>true</stealable>
+	<overrideMinifiedRot>North</overrideMinifiedRot>
+	<minifiedDrawOffset>(0, 0, 0.2)</minifiedDrawOffset>
+    <building>
+      <expandHomeArea>false</expandHomeArea>
+	  <isEdifice>false</isEdifice>
+	  <isAttachment>true</isAttachment>
+    </building>
+	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected> 
+	<placeWorkers>
+      <li>PlaceWorker_ShowTradeBeaconRadius</li>
+	  <li>Placeworker_AttachedToWall</li>
+    </placeWorkers>
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <terrainAffordanceNeeded IsNull="True" />
+    <researchPrerequisites>
+	  <li>UtilityPanelsRes</li>
+	</researchPrerequisites>
+  </ThingDef>
+  
 
   <ThingDef ParentName="BuildingBase">
     <defName>SunColumnMod</defName>
@@ -394,13 +467,172 @@
     </placeWorkers>
     <researchPrerequisites>
       <li>OrbitalTradeColumnRes</li>
-	  <li>AirConditioning</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <holdsRoof>true</holdsRoof>
     <canOverlapZones>true</canOverlapZones>
     <fertility>0</fertility>
 	<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Wall_SunDevice</defName>
+    <label>sun pad</label>
+    <description>A utility wall pad, acts like a small sun lamp and keeps the room temperatue, perfect for greenhouses. Automatically turns itself off at night.</description>
+    <thingClass>Building_SunLamp</thingClass>
+	<graphicData>
+	    <texPath>WallDevices/Wall_SunDevice</texPath>
+	    <graphicClass>Graphic_Multi</graphicClass>
+	    <drawOffsetNorth>(0,0,0.95)</drawOffsetNorth>
+	    <drawOffsetSouth>(0,0,-0.9)</drawOffsetSouth>
+	    <drawOffsetWest>(-0.9,0,0)</drawOffsetWest>
+	    <drawOffsetEast>(0.9,0,0)</drawOffsetEast>
+	    <damageData>
+		  <enabled>false</enabled>
+	    </damageData>
+	</graphicData>
+	<uiIconPath>WallDevices/Wall_SunDevice</uiIconPath>
+    <tickerType>Rare</tickerType>
+	<altitudeLayer>BuildingOnTop</altitudeLayer>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>0.1</Flammability>
+      <Mass>5</Mass>
+	  <Beauty>35</Beauty>
+    </statBases>
+    <fillPercent>0.25</fillPercent>
+    <costList>
+      <Steel>100</Steel>
+	  <Plasteel>5</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Glower">
+        <overlightRadius>4.9</overlightRadius>
+        <glowRadius>7.9</glowRadius>
+        <glowColor>(250,250,250,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <basePowerConsumption>900</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Schedule">
+        <!-- Match plant growing times -->
+        <startTime>0.25</startTime>
+        <endTime>0.8</endTime>
+        <offMessage>Off for plant resting period</offMessage>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>10</heatPerSecond>
+        <heatPushMaxTemperature>30</heatPushMaxTemperature>
+      </li>
+    </comps>
+    <specialDisplayRadius>3.9</specialDisplayRadius>
+    <pathCost>0</pathCost>
+    <passability>Standable</passability>
+    <designationCategory>Furniture</designationCategory>
+    <rotatable>true</rotatable>
+    <stealable>true</stealable>
+	<overrideMinifiedRot>North</overrideMinifiedRot>
+	<minifiedDrawOffset>(0, 0, 0.2)</minifiedDrawOffset>
+    <building>
+      <expandHomeArea>false</expandHomeArea>
+	  <isEdifice>false</isEdifice>
+	  <isAttachment>true</isAttachment>
+    </building>
+	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected> 
+	<placeWorkers>
+	  <li>PlaceWorker_GlowRadius</li>
+	  <li>Placeworker_AttachedToWall</li>
+    </placeWorkers>
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <terrainAffordanceNeeded IsNull="True" />
+    <researchPrerequisites>
+	  <li>UtilityPanelsRes</li>
+	</researchPrerequisites>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>Wall_HeatDevice</defName>
+    <label>heat pad</label>
+    <description>A utility wall pad, acts like a heater, keeps the small room temperature.</description>
+    <thingClass>RimWorldColumns.Building_IceColumn</thingClass>
+	<graphicData>
+	    <texPath>WallDevices/Wall_HeatDevice</texPath>
+	    <graphicClass>Graphic_Multi</graphicClass>
+	    <drawOffsetNorth>(0,0,0.95)</drawOffsetNorth>
+	    <drawOffsetSouth>(0,0,-0.9)</drawOffsetSouth>
+	    <drawOffsetWest>(-0.9,0,0)</drawOffsetWest>
+	    <drawOffsetEast>(0.9,0,0)</drawOffsetEast>
+	    <damageData>
+		  <enabled>false</enabled>
+	    </damageData>
+	</graphicData>
+	<uiIconPath>WallDevices/Wall_HeatDevice</uiIconPath>
+    <tickerType>Rare</tickerType>
+	<altitudeLayer>BuildingOnTop</altitudeLayer>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsTemperature</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>0.1</Flammability>
+      <Mass>5</Mass>
+	  <Beauty>15</Beauty>
+    </statBases>
+    <fillPercent>0.25</fillPercent>
+    <costList>
+      <Steel>50</Steel>
+	  <Plasteel>5</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+		<li Class="CompProperties_Glower">
+			<glowRadius>5.9</glowRadius>
+			<glowColor>(255,150,100,0)</glowColor>
+		</li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>175</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_TempControl">
+        <energyPerSecond>21</energyPerSecond>
+      </li>
+    </comps>
+    <pathCost>0</pathCost>
+    <passability>Standable</passability>
+    <designationCategory>Temperature</designationCategory>
+    <rotatable>true</rotatable>
+    <stealable>true</stealable>
+	<overrideMinifiedRot>North</overrideMinifiedRot>
+	<minifiedDrawOffset>(0, 0, 0.2)</minifiedDrawOffset>
+    <building>
+      <expandHomeArea>false</expandHomeArea>
+	  <isEdifice>false</isEdifice>
+	  <isAttachment>true</isAttachment>
+    </building>
+	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected> 
+	<placeWorkers>
+      <li>PlaceWorker_Heater</li>
+	  <li>Placeworker_AttachedToWall</li>
+    </placeWorkers>
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <terrainAffordanceNeeded IsNull="True" />
+    <researchPrerequisites>
+	  <li>UtilityPanelsRes</li>
+	</researchPrerequisites>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -470,9 +702,9 @@
       </li>
 		<li Class="CompProperties_TempControl">
 			<energyPerSecond>-50</energyPerSecond>
-			<defaultTargetTemperature>21</defaultTargetTemperature>
+			<defaultTargetTemperature>25</defaultTargetTemperature>
 			<minTargetTemperature>-80</minTargetTemperature>
-			<maxTargetTemperature>0</maxTargetTemperature>
+			<maxTargetTemperature>25</maxTargetTemperature>
 		</li>
 		<!--
 		<li Class="CompProperties_HeatPusher">
@@ -512,6 +744,86 @@
 	<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
 
+  <ThingDef ParentName="BuildingBase">
+    <defName>Wall_CoolDevice</defName>
+    <label>frozen pad</label>
+    <description>A utility wall pad, acts like a cooler, keeps the small room temperature, perfect for fridges.</description>
+    <thingClass>RimWorldColumns.Building_IceColumn</thingClass>
+	<graphicData>
+	    <texPath>WallDevices/Wall_CoolDevice</texPath>
+	    <graphicClass>Graphic_Multi</graphicClass>
+	    <drawOffsetNorth>(0,0,0.95)</drawOffsetNorth>
+	    <drawOffsetSouth>(0,0,-0.9)</drawOffsetSouth>
+	    <drawOffsetWest>(-0.9,0,0)</drawOffsetWest>
+	    <drawOffsetEast>(0.9,0,0)</drawOffsetEast>
+	    <damageData>
+		  <enabled>false</enabled>
+	    </damageData>
+	</graphicData>
+	<uiIconPath>WallDevices/Wall_CoolDevice</uiIconPath>
+    <tickerType>Rare</tickerType>
+	<altitudeLayer>BuildingOnTop</altitudeLayer>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>0.1</Flammability>
+      <Mass>5</Mass>
+	  <Beauty>15</Beauty>
+    </statBases>
+    <fillPercent>0.25</fillPercent>
+    <costList>
+      <Steel>50</Steel>
+	  <Plasteel>5</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+		<li Class="CompProperties_Glower">
+			<glowRadius>5.9</glowRadius>
+			<glowColor>(125,125,225,0)</glowColor>
+			<darklightToggle>true</darklightToggle>
+		</li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <basePowerConsumption>200</basePowerConsumption>
+      </li>
+		<li Class="CompProperties_TempControl">
+			<energyPerSecond>-21</energyPerSecond>
+			<defaultTargetTemperature>25</defaultTargetTemperature>
+			<minTargetTemperature>-80</minTargetTemperature>
+			<maxTargetTemperature>25</maxTargetTemperature>
+		</li>
+    </comps>
+    <pathCost>0</pathCost>
+    <passability>Standable</passability>
+    <designationCategory>Temperature</designationCategory>
+    <rotatable>true</rotatable>
+    <stealable>true</stealable>
+	<overrideMinifiedRot>North</overrideMinifiedRot>
+	<minifiedDrawOffset>(0, 0, 0.2)</minifiedDrawOffset>
+    <building>
+      <expandHomeArea>false</expandHomeArea>
+	  <isEdifice>false</isEdifice>
+	  <isAttachment>true</isAttachment>
+    </building>
+
+	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected> 
+	<placeWorkers>
+      <li>RimWorldColumns.PlaceWorker_IceColumn</li>
+	  <li>Placeworker_AttachedToWall</li>
+    </placeWorkers>
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <terrainAffordanceNeeded IsNull="True" />
+    <researchPrerequisites>
+	  <li>AirConditioning</li>
+	  <li>UtilityPanelsRes</li>
+	</researchPrerequisites>
+  </ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>DetColumnMod</defName>
@@ -676,6 +988,9 @@
 			</li>
 		</verbs>
   </ThingDef>
+	
+	
+	
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>FlameColumnMod</defName>
