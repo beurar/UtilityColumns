@@ -362,6 +362,96 @@
 	  <li>UtilityPanelsRes</li>
 	</researchPrerequisites>
   </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Wall_FirefoamPopper</defName>
+    <label>firefoam pad</label>
+    <description>A utility wall pad, acts like an small firefoam popper, When it detects fire, this safety device pops and sprays a fire-retardant foam in a circular field around itself. Can also be triggered manually.</description>
+    <thingClass>Building_FirefoamPopper</thingClass>
+    <graphicData>
+	    <texPath>WallDevices/Wall_FireFoam</texPath>
+	    <graphicClass>Graphic_Multi</graphicClass>
+	    <drawOffsetNorth>(0,0,0.9)</drawOffsetNorth>
+	    <drawOffsetSouth>(0,0,-0.86)</drawOffsetSouth>
+	    <drawOffsetWest>(-0.83,0,0)</drawOffsetWest>
+	    <drawOffsetEast>(0.83,0,0)</drawOffsetEast>
+	    <damageData>
+		  <enabled>false</enabled>
+	    </damageData>
+    </graphicData>
+	<uiIconPath>WallDevices/Wall_FireFoam</uiIconPath>
+    <tickerType>Normal</tickerType>
+	<altitudeLayer>BuildingOnTop</altitudeLayer>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Mass>5</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>-3</Beauty>
+    </statBases>
+    <fillPercent>0.25</fillPercent>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>8.9</explosiveRadius>
+        <explosiveDamageType>Extinguish</explosiveDamageType>
+        <startWickHitPointsPercent>-1</startWickHitPointsPercent>
+        <startWickOnDamageTaken>
+          <li>Flame</li>
+        </startWickOnDamageTaken>
+        <postExplosionSpawnThingDef>Filth_FireFoam</postExplosionSpawnThingDef>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+        <explosionEffect>ExtinguisherExplosion</explosionEffect>
+        <explosionSound>Explosion_FirefoamPopper</explosionSound>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>TriggerObject</useJob>
+        <useLabel>Trigger {0_label}</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_StartWick</compClass>
+      </li>
+      <li Class="CompProperties_ProximityFuse">
+        <target>Fire</target>
+        <radius>3</radius>
+      </li>
+    </comps>
+    <specialDisplayRadius>8.9</specialDisplayRadius>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <pathCost>0</pathCost>
+    <passability>Standable</passability>
+    <designationCategory>Misc</designationCategory>
+    <rotatable>true</rotatable>
+    <stealable>true</stealable>
+	<overrideMinifiedRot>North</overrideMinifiedRot>
+	<minifiedDrawOffset>(0, 0, 0.2)</minifiedDrawOffset>
+    <building>
+      <expandHomeArea>false</expandHomeArea>
+	  <isEdifice>false</isEdifice>
+	  <isAttachment>true</isAttachment>
+    </building>
+	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected> 
+	<placeWorkers>
+	  <li>Placeworker_AttachedToWall</li>
+    </placeWorkers>
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <terrainAffordanceNeeded IsNull="True" />
+    <researchPrerequisites>
+	  <li>UtilityPanelsRes</li>
+	  <li>Firefoam</li>
+	</researchPrerequisites>
+  </ThingDef>
+
+
   
 
   <ThingDef ParentName="BuildingBase">
@@ -824,6 +914,7 @@
 	  <li>UtilityPanelsRes</li>
 	</researchPrerequisites>
   </ThingDef>
+  
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>DetColumnMod</defName>
