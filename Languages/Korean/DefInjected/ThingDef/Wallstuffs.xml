@@ -13,5 +13,7 @@
 
   <Wall_CoolDevice.label>냉방 패드</Wall_CoolDevice.label>
   <Wall_CoolDevice.description>냉방 및 냉동실 관리에 유용한 벽 패드입니다. 냉방기처럼 작동하며, 귀중한 실내 공간을 아낄 수 있습니다.</Wall_CoolDevice.description>
-
+  
+  <Wall_CoolDevice.label>소방 패드</Wall_CoolDevice.label>
+  <Wall_CoolDevice.description>근처에 화재가 감지되면 긴급히 소방 거품을 뿜어 진압하는 벽 패드입니다. 사용 후에는 망가집니다.</Wall_CoolDevice.description>
 </LanguageData>
