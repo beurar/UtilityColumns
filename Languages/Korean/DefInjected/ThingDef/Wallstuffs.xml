@@ -5,7 +5,7 @@
   <Wall_TradeDevice.description>창고 관리에 유용한 벽 패드입니다. 주변 물품들을 궤도로 전송할 수 있으며, 귀중한 실내 공간을 아낄 수 있습니다.</Wall_TradeDevice.description>
 
   <Wall_HeatDevice.label>전열 패드</Wall_HeatDevice.label>
-  <Wall_HeatDevice.description>기지 방어를 위해 설계된 벽 패드입니다. 전열기처럼 작동하며, 귀중한 실내 공간을 아낄 수 있습니다.</Wall_HeatDevice.description>
+  <Wall_HeatDevice.description>기지 난방을 위해 설계된 벽 패드입니다. 전열기처럼 작동하며, 귀중한 실내 공간을 아낄 수 있습니다.</Wall_HeatDevice.description>
 
   <Wall_SunDevice.label>태양 패드</Wall_SunDevice.label>
   <Wall_SunDevice.description>좁은 면적의 실내 농장을 운영할 수 있게 해 주는 벽 패드입니다. 작물이 자랄 수 있는 빛을 내뿜습니다. 밤에는 자동으로 꺼집니다.</Wall_SunDevice.description>
@@ -15,5 +15,5 @@
   <Wall_CoolDevice.description>냉방 및 냉동실 관리에 유용한 벽 패드입니다. 냉방기처럼 작동하며, 귀중한 실내 공간을 아낄 수 있습니다.</Wall_CoolDevice.description>
   
   <Wall_CoolDevice.label>소방 패드</Wall_CoolDevice.label>
-  <Wall_CoolDevice.description>근처에 화재가 감지되면 긴급히 소방 거품을 뿜어 진압하는 벽 패드입니다. 사용 후에는 망가집니다.</Wall_CoolDevice.description>
+  <Wall_CoolDevice.description>근처에 화재가 감지되면 자동으로 소방 거품을 뿜어 진압하는 벽 패드입니다. 사용 후에는 망가집니다.</Wall_CoolDevice.description>
 </LanguageData>
