@@ -699,6 +699,8 @@
       </li>
       <li Class="CompProperties_TempControl">
         <energyPerSecond>21</energyPerSecond>
+		<minTargetTemperature>-170</minTargetTemperature>
+		<maxTargetTemperature>100</maxTargetTemperature>
       </li>
     </comps>
     <pathCost>0</pathCost>
@@ -2004,7 +2006,7 @@
 		</tradeTags>
 		<tradeNeverStack>true</tradeNeverStack>
 		<thingSetMakerTags>
-			<li>RewardStandardCore</li>
+			<li>RewardStandardLowFreq</li>
 		</thingSetMakerTags>
 		<comps>
 		  <li Class="CompProperties_ApparelVerbOwnerCharged">
