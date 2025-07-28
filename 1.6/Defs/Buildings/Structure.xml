@@ -1614,12 +1614,12 @@
 				<defaultProjectile>Bullet_DeadColumn</defaultProjectile>
 				<warmupTime>5</warmupTime>
 				<range>3.9</range>
-				<burstShotCount>1</burstShotCount>
-				<forcedMissRadius>0.9</forcedMissRadius>
+				<burstShotCount>3</burstShotCount>
+				<forcedMissRadius>1.5</forcedMissRadius>
 				<soundCast>GunShotA</soundCast>
 				<soundCastTail>GunTail_Light</soundCastTail>
 				<muzzleFlashScale>40</muzzleFlashScale>
-				<consumeFuelPerShot>15</consumeFuelPerShot>
+				<consumeFuelPerShot>5</consumeFuelPerShot>
 				<ai_AvoidFriendlyFireRadius>4</ai_AvoidFriendlyFireRadius>
 			</li>
 		</verbs>
