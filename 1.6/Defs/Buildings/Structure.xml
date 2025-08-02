@@ -1788,6 +1788,10 @@
 		</graphicData>
 		<uiIconPath>Buildings/ArchoColumn/ArchoColumnIcon</uiIconPath>
 		<altitudeLayer>Building</altitudeLayer>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
 		<statBases>
 			<MarketValue>12000</MarketValue>
 			<WorkToBuild>4000</WorkToBuild>
@@ -1801,7 +1805,7 @@
 		</costList>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
-		<size>(3,3)</size>
+		<size>(1,1)</size>
 		<fillPercent>0.25</fillPercent>
 		<specialDisplayRadius>3.9</specialDisplayRadius>
 		<comps>

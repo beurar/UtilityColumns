@@ -17,7 +17,7 @@
 		</columnsForRoomRequirement>
 		
 		<repairEffecter>Repair</repairEffecter>
-		<repairColumnRange>3.9</repairColumnRange>
+		<repairColumnRange>4.9</repairColumnRange>
 		<repairThingCount>10</repairThingCount>
 		<repairHPAmount>2</repairHPAmount>
 		<repairIntervalSeconds>12</repairIntervalSeconds>

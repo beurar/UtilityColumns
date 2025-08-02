@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Ideology</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>
+                        Defs/PreceptDef[defName="IdeoBuilding"]/buildingRoomRequirements//li[@Class="RoomRequirement_ThingCount"][thingDef="Column"]</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>
+                            Defs/PreceptDef[defName="IdeoBuilding"]/buildingRoomRequirements//li[@Class="RoomRequirement_ThingCount"][thingDef="Column"]</xpath>
+                        <value>
+                            <li Class="RoomRequirement_ThingAnyOfCount">
+                                <things>
+                                    <li>Column</li>
+                                </things>
+                                <count>2</count>
+                            </li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationInsert" MayRequire="Ludeon.RimWorld.Ideology">
+                    <xpath>
+                        Defs/PreceptDef[defName="IdeoBuilding"]/buildingRoomRequirements//li[@Class='RoomRequirement_ThingAnyOfCount']/things/li[text()="Column"]</xpath>
+                    <order>Append</order>
+                    <value>
+                        <li>LightColumnMod</li>
+                        <li>DarkColumnMod</li>
+                        <li>GraveColumnMod</li>
+                        <li>ArchotechDroneColumn</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
