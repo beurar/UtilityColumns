@@ -1789,6 +1789,7 @@
 		<uiIconPath>Buildings/ArchoColumn/ArchoColumnIcon</uiIconPath>
 		<altitudeLayer>Building</altitudeLayer>
 		<minifiedDef>MinifiedThing</minifiedDef>
+		<minifiedDrawOffset>(0, 0, 0.5)</minifiedDrawOffset>
 		<thingCategories>
 			<li>BuildingsMisc</li>
 		</thingCategories>
