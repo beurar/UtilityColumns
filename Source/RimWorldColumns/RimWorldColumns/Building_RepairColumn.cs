@@ -167,5 +167,25 @@ namespace RimWorldColumns
                 };
             }
         }
+		public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.SpawnSetup(map, respawningAfterLoad);
+            _areaCells = GenRadial.RadialCellsAround(Position, UCDefOf.ColumnSettings.repairColumnRange, false).ToArray();
+            RefuelComp = this.GetComp<CompRefuelable>();
+        }
+
+		public override void Tick()
+        {
+            // 포장(minified) 건물은 Tick 처리하지 않음
+            if (this is Building building && !building.Spawned)
+            {
+                return;
+            }
+            base.Tick();
+            if (RefuelComp.HasFuel && this.IsHashIntervalTick(UCDefOf.ColumnSettings.RepairIntervalTicks))
+            {
+                RepairBuildingsInRange();
+            }
+        }
     }
 }
