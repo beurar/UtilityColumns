@@ -294,8 +294,8 @@
   <ThingDef ParentName="BuildingBase">
     <defName>Wall_TradeDevice</defName>
     <label>orbital trade pad</label>
-    <description>A utility wall pad, acts like an orbital trade beacon, and lights the area, perfect for small warehouses.</description>
-    <thingClass>Building_OrbitalTradeBeacon</thingClass>
+    <description>A utility wall pad, acts like an small orbital trade beacon, and lights the area, perfect for small warehouses.</description>
+    <thingClass>Building_WallorbitalTradeBeacon</thingClass>
 	<graphicData>
 	    <texPath>WallDevices/Wall_TradeDevice</texPath>
 	    <graphicClass>Graphic_Multi</graphicClass>
@@ -323,7 +323,7 @@
     <fillPercent>0.25</fillPercent>
     <costList>
       <Steel>60</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <comps>
       <li Class="CompProperties_Flickable"/>
@@ -331,7 +331,7 @@
 		<li Class="CompProperties_Power">
 			<compClass>CompPowerTrader</compClass>
 			<shortCircuitInRain>false</shortCircuitInRain>
-			<basePowerConsumption>45</basePowerConsumption>
+			<basePowerConsumption>25</basePowerConsumption>
 		</li>
 		<li Class="CompProperties_Glower">
 			<glowRadius>5.9</glowRadius>
@@ -350,10 +350,12 @@
       <expandHomeArea>false</expandHomeArea>
 	  <isEdifice>false</isEdifice>
 	  <isAttachment>true</isAttachment>
+	  <watchBuildingStandDistanceRange>0~-6</watchBuildingStandDistanceRange>
+      <watchBuildingStandRectWidth>7</watchBuildingStandRectWidth>
     </building>
 	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected> 
 	<placeWorkers>
-      <li>PlaceWorker_ShowTradeBeaconRadius</li>
+      <li>PlaceWorker_Wallpad</li>
 	  <li>Placeworker_AttachedToWall</li>
     </placeWorkers>
 	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
@@ -569,7 +571,7 @@
     <defName>Wall_SunDevice</defName>
     <label>sun pad</label>
     <description>A utility wall pad, acts like a small sun lamp and keeps the room temperatue, perfect for greenhouses. Automatically turns itself off at night.</description>
-    <thingClass>Building_SunLamp</thingClass>
+    <thingClass>Building_WallSunLamp</thingClass>
 	<graphicData>
 	    <texPath>WallDevices/Wall_SunDevice</texPath>
 	    <graphicClass>Graphic_Multi</graphicClass>
@@ -597,21 +599,15 @@
     </statBases>
     <fillPercent>0.25</fillPercent>
     <costList>
-      <Steel>100</Steel>
-	  <Plasteel>5</Plasteel>
+      <Steel>50</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <comps>
       <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_Glower">
-        <overlightRadius>4.9</overlightRadius>
-        <glowRadius>7.9</glowRadius>
-        <glowColor>(250,250,250,0)</glowColor>
-      </li>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <shortCircuitInRain>false</shortCircuitInRain>
-        <basePowerConsumption>900</basePowerConsumption>
+        <basePowerConsumption>450</basePowerConsumption>
       </li>
       <li Class="CompProperties_Schedule">
         <!-- Match plant growing times -->
@@ -621,11 +617,12 @@
       </li>
       <li Class="CompProperties_HeatPusher">
         <compClass>CompHeatPusherPowered</compClass>
-        <heatPerSecond>10</heatPerSecond>
+        <heatPerSecond>5</heatPerSecond>
         <heatPushMaxTemperature>30</heatPushMaxTemperature>
       </li>
+	  <li Class="CompProperties_Wallsunpad">
+      </li>
     </comps>
-    <specialDisplayRadius>3.9</specialDisplayRadius>
     <pathCost>0</pathCost>
     <passability>Standable</passability>
     <designationCategory>Furniture</designationCategory>
@@ -637,10 +634,12 @@
       <expandHomeArea>false</expandHomeArea>
 	  <isEdifice>false</isEdifice>
 	  <isAttachment>true</isAttachment>
+	  <watchBuildingStandDistanceRange>0~-3</watchBuildingStandDistanceRange>
+      <watchBuildingStandRectWidth>5</watchBuildingStandRectWidth>
     </building>
 	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected> 
 	<placeWorkers>
-	  <li>PlaceWorker_GlowRadius</li>
+	   <li>PlaceWorker_Wallpad</li>
 	  <li>Placeworker_AttachedToWall</li>
     </placeWorkers>
 	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
@@ -1789,7 +1788,6 @@
 		<uiIconPath>Buildings/ArchoColumn/ArchoColumnIcon</uiIconPath>
 		<altitudeLayer>Building</altitudeLayer>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<minifiedDrawOffset>(0, 0, 0.5)</minifiedDrawOffset>
 		<thingCategories>
 			<li>BuildingsMisc</li>
 		</thingCategories>

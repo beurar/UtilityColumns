@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+   <ThingDef ParentName="BuildingBase">
+    <defName>Wall_SunDevice_light</defName>
+    <label>Sunlight range</label>
+	<graphicData>
+	  <texPath>Misc/Blank</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <thingClass>Building</thingClass>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>Standable</passability>
+    <building>
+      <isInert>true</isInert>
+      <isEdifice>false</isEdifice>
+	  <deconstructible>false</deconstructible>
+    </building>
+    <selectable>false</selectable>
+	<tickerType>Rare</tickerType>
+    <size>(1,1)</size>
+	<fillPercent>0.00</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <comps>
+	  <li Class="CompProperties_Glower">
+        <glowRadius>1</glowRadius>
+        <glowColor>(255,255,255,0)</glowColor>
+        <overlightRadius>2</overlightRadius>
+      </li>
+	  <li Class="CompProperties_Schedule">
+        <!-- Match plant growing times -->
+        <startTime>0.25</startTime>
+        <endTime>0.8</endTime>
+        <offMessage>Off for plant resting period</offMessage>
+      </li>
+    </comps>
+    <rotatable>false</rotatable>
+    <clearBuildingArea>false</clearBuildingArea>
+  </ThingDef>
+
+</Defs>
